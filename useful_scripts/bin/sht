@@ -1,0 +1,4 @@
+#!/bin/bash
+AUTOSSH_PORT=`jot -r 1  2000 65000`
+SSH_HOST=$1
+autossh -M $AUTOSSH_PORT "$1" -t 'tmux attach-session -t david || tmux -f ~/.daviddotfiles/.tmux.conf new-session -s david'
