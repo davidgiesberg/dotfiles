@@ -1,4 +1,27 @@
 #!/bin/bash
-AUTOSSH_PORT=`jot -r 1  2000 65000`
+
+rand (){
+  echo $(od -vAn -N4 -tu4 /dev/urandom)
+}
+
+random_port (){
+  port=0
+  while [ "$port" -lt "2000" ]
+  do
+    port=$(( $(rand) % 65536 ))
+  done
+  echo $port
+}
+
+AUTOSSH_PORT=$(random_port)
+
 SSH_HOST=$1
+nametab "$SSH_HOST"
+
 autossh -M $AUTOSSH_PORT "$1" -t 'tmux attach-session -t david || tmux -f ~/.daviddotfiles/.tmux.conf new-session -s david'
+# Bombs out if tmux is not installed
+# TODO: if exit code is 127 (command not found) offer to install tmux
+# TODO: break out session config into a bootstrap script
+# TODO: if dotfiles not installed, offer to install
+
+nametab "Shell"
