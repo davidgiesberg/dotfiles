@@ -1,0 +1,16 @@
+[user]
+	name = David Giesberg
+	email = git@davidgiesberg.net
+[alias]
+	co = checkout
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[core]
+	excludesfile = .gitignore_global
+	autocrlf = input
+[apply]
+	whitespace = nowarn
+[push]
+	default = simple

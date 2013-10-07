@@ -1,44 +1,10 @@
 #!/bin/bash
 
-set_platform() {
-  case "$OSTYPE" in
-    solaris*) platform="SOLARIS" ;;
-    darwin*)  platform="OSX" ;;
-    linux*)   platform="LINUX" ;;
-    bsd*)     platform="BSD" ;;
-    *)        platform="unknown" ;;
-  esac
-}
-check_for_root (){
-  if [ "$(/usr/bin/id -u)" == "0" ]; then
-    echo "Don't run as root"
-    exit 1
-  fi
-}
-
-check_for_stow () {
-  command -v stow >/dev/null 2>&1
-}
-
-install_stow () {
-  case "$platform" in
-    OSX)   install_cmd="brew install stow" ;;
-    LINUX) install_cmd="sudo apt-get install stow" ;;
-  esac
-
-  if [ "$(/usr/bin/id -u)" != "0" ] && [ "$platform" == "LINUX" ]; then
-    echo "Needs sudo to install stow"
-  fi
-
-  $install_cmd
-}
+source ./bootstrap-includes
 
 check_for_root
 set_platform
 
-if check_for_stow; then
-  echo "Stow already installed"
-else
-  echo "Installing stow"
-  install_stow
-fi
+check_for_and_install_pkg git
+
+check_for_and_install_pkg stow

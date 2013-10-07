@@ -1,0 +1,49 @@
+#!/bin/bash
+
+set_platform() {
+  case "$OSTYPE" in
+    solaris*) platform="SOLARIS" ;;
+    darwin*)  platform="OSX" ;;
+    linux*)   platform="LINUX" ;;
+    bsd*)     platform="BSD" ;;
+    *)        platform="unknown" ;;
+  esac
+}
+
+check_for_root (){
+  if [ "$(/usr/bin/id -u)" == "0" ]; then
+    echo "Don't run as root"
+    exit 1
+  fi
+}
+
+check_for_pkg () {
+  package_name=$1
+  command -v $package_name >/dev/null 2>&1
+}
+
+install_pkg () {
+  package_name=$1
+
+  case "$platform" in
+    OSX)   install_cmd="brew install $package_name" ;;
+    LINUX) install_cmd="sudo apt-get install $package_name" ;;
+  esac
+
+  if [ "$(/usr/bin/id -u)" != "0" ] && [ "$platform" == "LINUX" ]; then
+    echo "Needs sudo to install $package_name"
+  fi
+
+  echo "Installing $package_name"
+  $install_cmd
+}
+
+check_for_and_install_pkg () {
+  package_name=$1
+
+  if $(check_for_pkg $package_name); then
+    echo "$package_name already installed"
+  else
+    install_stow
+  fi
+}
