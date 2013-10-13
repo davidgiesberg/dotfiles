@@ -44,6 +44,6 @@ check_for_and_install_pkg () {
   if $(check_for_pkg $package_name); then
     echo "$package_name already installed"
   else
-    install_stow
+    install_pkg $package_name
   fi
 }
