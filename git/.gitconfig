@@ -8,7 +8,7 @@
 	status = auto
 	branch = auto
 [core]
-	excludesfile = .gitignore_global
+	excludesfile = ~/.gitignore_global
 	autocrlf = input
 [apply]
 	whitespace = nowarn
