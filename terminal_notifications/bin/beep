@@ -1,0 +1,2 @@
+#Just beep, nothing fancy to see here
+echo -en "\007"
