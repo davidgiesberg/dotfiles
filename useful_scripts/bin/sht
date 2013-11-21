@@ -18,9 +18,9 @@ random_port (){
 AUTOSSH_PORT=$(random_port)
 
 SSH_HOST=$1
-nametab "$SSH_HOST"
+nametab "SSH $SSH_HOST"
 
-autossh -M $AUTOSSH_PORT "$1" -t 'tmux attach-session -t david || tmux -f ~/.daviddotfiles/.tmux.conf new-session -s david'
+autossh -M $AUTOSSH_PORT "$1" -t 'tmux attach-session -t david || tmux -f ~/.tmux.conf new-session -s david'
 # Bombs out if tmux is not installed
 # TODO: if exit code is 127 (command not found) offer to install tmux
 # TODO: break out session config into a bootstrap script
