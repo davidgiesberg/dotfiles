@@ -1,5 +1,11 @@
 # Bootstrap with this command:
-#   echo ". $HOME/.bashrc.load" >> ~/.bashrc
+#   echo ". $HOME/.bashrc.load" >> ~/.bashrc #OR ~/.bash_profile in OS X
+#   brew install bash-completion
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ]; then
+  PATH="$HOME/bin:$PATH"
+fi
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
