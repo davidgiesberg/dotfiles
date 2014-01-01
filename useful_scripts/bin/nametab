@@ -6,9 +6,4 @@ if [ -z "$NEW_NAME" ]; then
   exit
 fi
 
-# Detect if we're in a tmux session or not
-if { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
-  tmux rename-window "$NEW_NAME"
-else
-  echo -n -e "\033]0;$NEW_NAME\007"
-fi
+echo -n -e "\033]0;$NEW_NAME\007"

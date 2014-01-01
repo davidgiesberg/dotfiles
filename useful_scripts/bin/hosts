@@ -1,0 +1,6 @@
+#!/bin/bash
+HOST=$1
+IP=$(sudo -u david gethost $HOST)
+HOSTSLINE="$IP $HOST"
+echo $HOSTSLINE
+echo $HOSTSLINE >> /etc/hosts

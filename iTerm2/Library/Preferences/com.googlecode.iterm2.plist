@@ -296,7 +296,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.dotfiles/iTerm2/usr</string>
+	<string>~/Downloads</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -321,11 +321,11 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>529 242 924 485 0 0 1920 1058 </string>
+	<string>843 648 924 485 0 0 2560 1418 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 607 570 451 0 0 1920 1058 </string>
+	<string>0 -269 570 451 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>284 97 570 451 0 0 1920 1058 </string>
+	<string>0 15 1277 1403 0 0 2560 1418 </string>
 	<key>NeverWarnAboutShortLivedSessions_27F1E277-D10E-4126-849C-A15EAC5B069D</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_2B763361-3E0B-4F1D-81BD-D637EB571335</key>
@@ -579,7 +579,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>tmux -CC new -A -s base</string>
+			<string></string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -892,7 +892,7 @@
 			<key>Normal Font</key>
 			<string>Monaco 12</string>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
@@ -1303,7 +1303,7 @@
 				<real>0.44058024883270264</real>
 			</dict>
 			<key>Guid</key>
-			<string>312908BF-642F-4214-9DDC-937BB9D8EB2E</string>
+			<string>A1906D2A-01B2-4337-8E73-0D01ACA8873C</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -1311,7 +1311,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>tmux -CC -A -s base</string>
+			<string>tmux -CC new -A -s base</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -1772,7 +1772,7 @@
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
-			<string>xterm</string>
+			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
@@ -1797,6 +1797,8 @@
 			<string>/Users/david</string>
 		</dict>
 	</array>
+	<key>NoSyncNeverRemindPrefsChangesCopy</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1861,7 +1863,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-12-03T05:28:32Z</date>
+	<date>2013-12-12T22:05:41Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
