@@ -1,6 +1,7 @@
 #!/bin/bash
 # bootstrap with this command:
 #   sudo apt-get install autossh
+#   brew install autossh
 
 rand (){
   echo $(od -vAn -N4 -tu4 /dev/urandom)
