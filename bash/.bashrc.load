@@ -24,6 +24,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 PATH=$HOME/bin:$PATH
+if [ -d $HOME/.bashrc.d ]; then
+    for x in $HOME/.bashrc.d/* ; do
+        test -f "$x" || continue
+        test -x "$x" || continue
+        . "$x"
+    done
+fi
 
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
