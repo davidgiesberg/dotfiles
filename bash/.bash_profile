@@ -1,1 +1,1 @@
-. /Users/david/.bashrc.load
+. $HOME/.bashrc.load
