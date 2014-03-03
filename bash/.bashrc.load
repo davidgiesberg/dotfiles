@@ -39,11 +39,11 @@ GIT_PS1_SHOWUPSTREAM="auto git"
 
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@$(hostname -s)\007"'
 
-if [ $(hostname -s) != "Davids-MacBook-Air" ]
+if [[ $(hostname -s) =~ Davids.* ]]
 then
-  export PS1='\[\e[1;31m\]\u@\h\[\e[0m\] \W$(__git_ps1 " [\[\e[1;31m\]%s\[\e[0m\]]")\$ '
-else
   export PS1='\[\e[1;31m\]\u\[\e[0m\] \W$(__git_ps1 " [\[\e[1;31m\]%s\[\e[0m\]]")\$ '
+else
+  export PS1='\[\e[1;31m\]\u@\h\[\e[0m\] \W$(__git_ps1 " [\[\e[1;31m\]%s\[\e[0m\]]")\$ '
 fi
 
 
