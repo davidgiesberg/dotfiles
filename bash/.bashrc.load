@@ -16,18 +16,21 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Removed because it's redundant
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
-fi
+# if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+#    echo "bash_completion"
+#    . /etc/bash_completion
+# fi
 
 PATH=$HOME/bin:$PATH
 if [ -d $HOME/.bashrc.d ]; then
     for x in $HOME/.bashrc.d/* ; do
         test -f "$x" || continue
         test -x "$x" || continue
+#	echo "Loading ${x}"
         . "$x"
     done
 fi
@@ -46,9 +49,10 @@ else
   export PS1='\[\e[1;31m\]\u@\h\[\e[0m\] \W$(__git_ps1 " [\[\e[1;31m\]%s\[\e[0m\]]")\$ '
 fi
 
-
-
-
 export EDITOR=emacs
 
 export PATH="$HOME/.cask/bin:$PATH"
+
+CDPATH=$CDPATH:$HOME/src/chef-repo/cookbooks:$HOME/src
+
+export HISTFILESIZE=100000
