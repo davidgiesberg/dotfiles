@@ -13,7 +13,14 @@
 )
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(setq
+  show-trailing-whitespace t
+)
+
 (global-linum-mode t)
+(setq
+   require-final-newline t
+)
 
 ;; store all backup and autosave files in the tmp dir
 (setq backup-directory-alist
