@@ -1,5 +1,4 @@
 .pt
-.DS_Store
 
 # Thumbnails
 ._*
@@ -20,16 +19,14 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-bin/
-build/
+#bin/
+#build/
 develop-eggs/
-dist/
+#dist/
 eggs/
-lib/
 lib64/
 parts/
 sdist/
-var/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -89,3 +86,5 @@ tramp
 # elpa packages
 /elpa/
 ##====/EMACS STUFF====#
+
+.DS_Store

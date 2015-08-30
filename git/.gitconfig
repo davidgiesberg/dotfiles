@@ -5,6 +5,7 @@
 	email = git@davidgiesberg.net
 [alias]
 	co = checkout
+	wdiff = diff --color-words
 [color]
 	diff = auto
 	status = auto
@@ -16,3 +17,5 @@
 	whitespace = nowarn
 [push]
 	default = simple
+[init]
+	templatedir = ~/.git-templates
