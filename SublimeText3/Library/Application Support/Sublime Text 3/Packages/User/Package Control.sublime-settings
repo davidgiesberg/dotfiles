@@ -1,13 +1,24 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
 	"installed_packages":
 	[
-		"GitGutter",
+		"Better CoffeeScript",
+		"Chef",
+		"Git",
+		"Github Tools",
 		"JSONLint",
+		"Markdown Preview",
+		"nginx",
 		"Package Control",
+		"Shell Turtlestein",
 		"SSH Config",
-		"Theme - Sodarized"
+		"SublimeLinter",
+		"SublimeLinter-annotations",
+		"SublimeLinter-rubocop",
+		"Theme - Sodarized",
+		"VCS Gutter"
 	]
 }

@@ -1,9 +1,21 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Solarized (Light).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Solarized (Light) (SL).tmTheme",
+	"folder_exclude_patterns":
+	[
+		".kitchen"
+	],
+	"font_size": 12,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"paths":
+	{
+		"osx":
+		[
+			"~/.rbenv/shims"
+		]
+	},
 	"tab_size": 2,
 	"theme": "Sodarized Light 3.sublime-theme",
 	"translate_tabs_to_spaces": true
