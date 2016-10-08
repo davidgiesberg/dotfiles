@@ -6,6 +6,7 @@ export PATH=/usr/local/bin:$PATH
 #   . $(brew --prefix)/etc/bash_completion
 #   set +x
 # fi
+
 if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
   . $(brew --prefix)/share/bash-completion/bash_completion
 fi
