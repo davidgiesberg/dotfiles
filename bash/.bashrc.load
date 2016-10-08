@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Bootstrap with this command:
 #   echo ". $HOME/.bashrc.load" >> ~/.bashrc #OR ~/.bash_profile in OS X
 #   brew install bash-completion
@@ -16,37 +17,39 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Removed because it's redundant
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-# if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-#    echo "bash_completion"
-#    . /etc/bash_completion
-# fi
-
-PATH=$HOME/bin:$PATH
-if [ -d $HOME/.bashrc.d ]; then
-    for x in $HOME/.bashrc.d/* ; do
-        test -f "$x" || continue
-        test -x "$x" || continue
-#	echo "Loading ${x}"
-        . "$x"
-    done
-fi
-
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
 GIT_PS1_SHOWUPSTREAM="auto git"
 
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@$(hostname -s)\007"'
+title(){
+    echo -ne "\033]0;"$*"\007"
+}
+
+prompt_command(){
+  local RED="\[\033[1;31m\]"
+  local DEFAULT="\[\033[0;39m\]"
+
+  local __GIT_STATUS="$(__git_ps1 " [${RED}%s${DEFAULT}]")"
+
+  export PS1="\W${__GIT_STATUS}$ "
+
+  title "$(basename $(pwd))"
+}
 
 if [[ $(hostname -s) =~ (d|D)avid.* ]]
 then
-  export PS1='\[\e[1;31m\]\u\[\e[0m\] \W$(__git_ps1 " [\[\e[1;31m\]%s\[\e[0m\]]")\$ '
-else
+  PROMPT_COMMAND=prompt_command
+ else
   export PS1='\[\e[1;31m\]\u@\h\[\e[0m\] \W$(__git_ps1 " [\[\e[1;31m\]%s\[\e[0m\]]")\$ '
+fi
+
+if [ -d $HOME/.bashrc.d ]; then
+    for x in $HOME/.bashrc.d/* ; do
+        test -f "$x" || continue
+        test -x "$x" || continue
+        . "$x"
+    done
 fi
 
 export EDITOR=emacs
@@ -55,4 +58,5 @@ export PATH="$HOME/.cask/bin:$PATH"
 
 CDPATH=$CDPATH:$HOME/src/chef-repo/cookbooks:$HOME/src
 
-export HISTFILESIZE=100000
+export HISTSIZE=100000
+export HISTTIMEFORMAT="%F %H:%M:%S "
