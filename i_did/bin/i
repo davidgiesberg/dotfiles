@@ -1,0 +1,22 @@
+#!/usr/local/bin/bash
+DATE_STR=$(date +%Y-%m-%d)
+TIME_STR=$(date +%H:%M)
+NOTATIONAL_DATA_DIR="$HOME/Library/Application Support/Notational Data"
+NOTE_FILE="$NOTATIONAL_DATA_DIR/$DATE_STR.txt"
+
+if [[ -z "$@" ]]; then
+    read NOTE
+else
+    NOTE="$@"
+fi
+
+NOTE_TEXT="$TIME_STR: ${NOTE^}"
+
+last_line="$(tail -n1 "$NOTE_FILE")"
+if [ "${last_line:-1}" != "\n" ]; then
+#    printf "\n" >> "$NOTE_FILE"
+    true
+fi
+
+echo "$NOTE_TEXT" >> "$NOTE_FILE"
+echo "$NOTE_TEXT"
