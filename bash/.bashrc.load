@@ -37,7 +37,7 @@ prompt_command(){
   title "$(basename $(pwd))"
 }
 
-if [[ $(hostname -s) =~ (d|D)avid.* ]]
+if [[ $(hostname -s) =~ (CLI-4748|((d|D)avid.*)) ]]
 then
   PROMPT_COMMAND=prompt_command
  else
