@@ -1,0 +1,2 @@
+#!/bin/sh
+echo "$(basename $(git rev-parse --show-toplevel)):$(git rev-parse --abbrev-ref HEAD) - $(git log -1 --format=format:%B)" | $HOME/bin/i
