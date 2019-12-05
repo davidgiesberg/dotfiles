@@ -1,0 +1,5 @@
+alias gc='git commit'
+alias gcv='git commit --no-verify'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gs='git status'
