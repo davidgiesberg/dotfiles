@@ -1,5 +1,3 @@
-alias cb='cd $HOME/src/chef-repo/cookbooks; ls .'
-alias cc='$HOME/bin/cc_run'
 alias ls="ls -G"
 alias src="cd $HOME/src; ls ."
 alias v='vagrant'
@@ -10,9 +8,3 @@ alias gcv='git commit --no-verify'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gs='git status'
-alias cbcheck='${HOME}/src/chef-repo/.git/hooks/pre-commit'
-alias kc='kitchen converge'
-alias kv='kitchen verify'
-alias kcv='kitchen converge && kitchen verify'
-alias kl='kitchen login'
-alias k='kitchen'

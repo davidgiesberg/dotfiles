@@ -1,0 +1,8 @@
+alias cb='cd $HOME/src/chef-repo/cookbooks; ls .'
+alias cc='$HOME/bin/cc_run'
+alias cbcheck='${HOME}/src/chef-repo/.git/hooks/pre-commit'
+alias kc='kitchen converge'
+alias kv='kitchen verify'
+alias kcv='kitchen converge && kitchen verify'
+alias kl='kitchen login'
+alias k='kitchen'
