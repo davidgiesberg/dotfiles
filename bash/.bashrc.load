@@ -45,7 +45,7 @@ if [ -d $HOME/.bashrc.d ]; then
     done
 fi
 
-if [[ $(hostname -s) =~ (CLI-4748|((d|D)avid.*)) ]]
+if [[ $(hostname -s) =~ (ML-|((d|D)avid.*)) ]]
 then
   PROMPT_COMMAND=prompt_command
  else
