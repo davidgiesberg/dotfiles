@@ -1,11 +1,6 @@
 # Make sure that homebrew versions of apps (like git) override builtin versions
 export PATH=/usr/local/bin:$PATH
 
-# Make sure that you have the bash-completion homebrew package installed and updated (brew install bash-completion)
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
-#if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
-#  . $(brew --prefix)/share/bash-completion/bash_completion
-#fi
+# Compatible with homebrew bash-completion@2
+export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/etc/bash_completion.d"
+[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"

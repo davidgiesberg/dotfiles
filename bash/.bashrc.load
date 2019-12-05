@@ -37,19 +37,19 @@ prompt_command(){
   title "$(basename $(pwd))"
 }
 
-if [[ $(hostname -s) =~ (CLI-4748|((d|D)avid.*)) ]]
-then
-  PROMPT_COMMAND=prompt_command
- else
-  export PS1='\[\e[1;31m\]\u@\h\[\e[0m\] \W$(__git_ps1 " [\[\e[1;31m\]%s\[\e[0m\]]")\$ '
-fi
-
 if [ -d $HOME/.bashrc.d ]; then
     for x in $HOME/.bashrc.d/* ; do
         test -f "$x" || continue
         test -x "$x" || continue
         . "$x"
     done
+fi
+
+if [[ $(hostname -s) =~ (CLI-4748|((d|D)avid.*)) ]]
+then
+  PROMPT_COMMAND=prompt_command
+ else
+  export PS1='\[\e[1;31m\]\u@\h\[\e[0m\] \W$(__git_ps1 " [\[\e[1;31m\]%s\[\e[0m\]]")\$ '
 fi
 
 export EDITOR=emacs
