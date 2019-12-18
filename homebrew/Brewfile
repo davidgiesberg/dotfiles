@@ -1,0 +1,33 @@
+tap 'homebrew/cask'
+
+brew 'stow'
+brew 'bash'
+brew 'bash-completion@2'
+brew 'git'
+brew 'emacs'
+brew 'ag'
+brew 'findutils' # GNU find, xargs, locate
+
+cask 'slack'
+cask 'bartender'
+cask 'witch'
+cask 'signal'
+cask 'alfred'
+cask 'spotify'
+cask 'spotify-notifications'
+
+brew 'mas'
+
+mas 'the-clock', id: 488764545
+mas 'todoist', id: 585829637
+
+tap 'homebrew/cask-fonts'
+cask 'font-hack'
+
+mas 'airmail', id: 918858936
+mas 'divvy', id: 413857545
+mas 'miniplay', id: 936243210
+
+cask 'sublime-text'
+cask 'bettertouchtool'
+cask 'dash'
