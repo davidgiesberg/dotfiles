@@ -60,3 +60,5 @@ CDPATH=$CDPATH:$HOME/src/chef-repo/cookbooks:$HOME/src
 
 export HISTSIZE=100000
 export HISTTIMEFORMAT="%F %H:%M:%S "
+export HISTCONTROL="ignorespace"
+PROMPT_COMMAND="$PROMPT_COMMAND; history -a"
