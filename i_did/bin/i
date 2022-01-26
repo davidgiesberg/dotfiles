@@ -1,7 +1,7 @@
 #!/usr/local/bin/bash
 DATE_STR=$(date +%Y-%m-%d)
 TIME_STR=$(date +%H:%M)
-NOTATIONAL_DATA_DIR="$HOME/Dropbox/new_notes"
+NOTATIONAL_DATA_DIR="$HOME/Dropbox/new_notes/current"
 NOTE_FILE="$NOTATIONAL_DATA_DIR/$DATE_STR.txt"
 
 if [[ -z "$@" ]]; then
