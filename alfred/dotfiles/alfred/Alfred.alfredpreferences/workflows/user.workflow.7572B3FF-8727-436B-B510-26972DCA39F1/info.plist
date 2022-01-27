@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>4B620C0F-B877-4839-9D1E-F142EE909A2D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>63AA6F72-E1FA-4094-A3C3-FB015C42A379</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>63AA6F72-E1FA-4094-A3C3-FB015C42A379</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4883B320-F625-4375-9D8C-779967912C1A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>pretty print</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>pp</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Pretty Print</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>4B620C0F-B877-4839-9D1E-F142EE909A2D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>import sys
+import json
+import xml.dom.minidom
+import sqlparse
+import subprocess
+
+def getClipboardData():
+  p = subprocess.Popen(['pbpaste'], stdout=subprocess.PIPE)
+  retcode = p.wait()
+  data = p.stdout.read()
+  return data
+
+action = "{query}"
+content = getClipboardData()
+
+try:
+  if action == "sql":
+    print sqlparse.format(content, reindent=True, keyword_case='upper')
+    pass
+  elif action == "xml":
+    xml = xml.dom.minidom.parseString(content.strip()) # or xml.dom.minidom.parseString(xml_string)
+    print xml.toprettyxml()
+    pass
+  elif action == "json":
+    data=json.loads(content)
+    print json.dumps(data, sort_keys=True, indent=4, separators=(',', ': '))
+    pass
+  elif action == "oneline":
+    print ' '.join([x.strip() for x in content.split("\n")])
+  else:
+    print "Format not recognized/supported"
+except Exception, e:
+  print "Error trying to prettify: "+str(e)</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>63AA6F72-E1FA-4094-A3C3-FB015C42A379</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>4883B320-F625-4375-9D8C-779967912C1A</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>4883B320-F625-4375-9D8C-779967912C1A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>575</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>4B620C0F-B877-4839-9D1E-F142EE909A2D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>185</integer>
+			<key>ypos</key>
+			<integer>250</integer>
+		</dict>
+		<key>63AA6F72-E1FA-4094-A3C3-FB015C42A379</key>
+		<dict>
+			<key>xpos</key>
+			<integer>370</integer>
+			<key>ypos</key>
+			<integer>255</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

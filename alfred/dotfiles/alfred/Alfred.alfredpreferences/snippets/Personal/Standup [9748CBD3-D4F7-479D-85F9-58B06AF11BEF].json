@@ -1,0 +1,9 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "# Standup\n\n## Yesterday\n\n* {cursor}\n\n## Today\n\n*\n",
+    "dontautoexpand" : true,
+    "uid" : "9748CBD3-D4F7-479D-85F9-58B06AF11BEF",
+    "name" : "Standup",
+    "keyword" : "standup"
+  }
+}

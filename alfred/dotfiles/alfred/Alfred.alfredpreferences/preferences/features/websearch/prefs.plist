@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>4451E5E8-44B9-471C-9962-BDED93F03ED6</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>partnernet</string>
+			<key>text</key>
+			<string>Partnernet: "{query}"</string>
+			<key>url</key>
+			<string>https://heb.lightning.force.com/c/myNet.app?content_type=Search&amp;content_id={query}&amp;content_name=allRes-tab</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>8988C565-5459-41D8-9041-0A88FA92B2DE</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>inc</string>
+			<key>text</key>
+			<string>INC-{query}</string>
+			<key>url</key>
+			<string>https://hebecom.atlassian.net/browse/INC-{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>E7B3FFBB-98E7-46BB-BE79-1DA71D0684AE</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>con</string>
+			<key>text</key>
+			<string>Confluence</string>
+			<key>url</key>
+			<string>https://hebecom.atlassian.net/wiki/search?text={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
