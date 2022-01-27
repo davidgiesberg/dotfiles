@@ -1,3 +1,5 @@
+# brew bundle install -v --file /Users/g180260/Brewfile
+
 tap 'homebrew/cask'
 
 brew 'stow'
@@ -7,7 +9,10 @@ brew 'git'
 brew 'emacs'
 brew 'ag'
 brew 'findutils' # GNU find, xargs, locate
+brew 'jq'
 
+#cask '1password'
+cask '1password-cli'
 cask 'slack'
 cask 'bartender'
 cask 'witch'
@@ -31,3 +36,18 @@ mas 'miniplay', id: 936243210
 cask 'sublime-text'
 cask 'bettertouchtool'
 cask 'dash'
+
+cask 'virtualbox'
+cask 'vagrant'
+brew 'docker-machine'
+
+brew 'awscli'
+cask 'aws-vault'
+
+brew 'grep'
+brew 'watch'
+brew 'coreutils'
+
+brew 'kubectl'
+
+cask 'macdown'
