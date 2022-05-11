@@ -17,6 +17,34 @@
 			<key>utf8</key>
 			<true/>
 		</dict>
+		<key>6E794921-2451-4F76-8350-0FA9A82F07E5</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>backstage</string>
+			<key>spaces</key>
+			<string>+</string>
+			<key>text</key>
+			<string>Backstage</string>
+			<key>url</key>
+			<string>https://backstage.heb.tools/search?query={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>743FAB80-DDE9-4F3C-AE9C-30176CF55A1E</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>j</string>
+			<key>text</key>
+			<string>Open {query} in Jira</string>
+			<key>url</key>
+			<string>https://hebecom.atlassian.net/browse/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
 		<key>8988C565-5459-41D8-9041-0A88FA92B2DE</key>
 		<dict>
 			<key>enabled</key>
