@@ -19,7 +19,6 @@ cask "witch"
 cask "signal"
 cask "alfred"
 cask "spotify"
-cask "spotify-notifications"
 
 brew "mas"
 
@@ -30,16 +29,11 @@ tap "homebrew/cask-fonts"
 cask "font-hack"
 
 mas "Airmail", id: 918858936
-mas "Divvy", id: 413857545
+#mas "Divvy", id: 413857545 # Not M1 compatible
 mas "MiniPlay", id: 936243210
 
 cask "sublime-text"
-cask "bettertouchtool"
 cask "dash"
-
-cask "virtualbox"
-cask "vagrant"
-brew "docker-machine"
 
 brew "awscli"
 cask "aws-vault"
@@ -48,7 +42,5 @@ brew "grep"
 brew "watch"
 brew "coreutils"
 
-brew "kubectl"
-
 cask "macdown"
-cask "karabiner-elements"
+#cask "karabiner-elements"
