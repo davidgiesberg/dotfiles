@@ -37,10 +37,17 @@ cask "dash"
 
 brew "awscli"
 cask "aws-vault"
+cask "google-cloud-sdk"
 
 brew "grep"
 brew "watch"
 brew "coreutils"
+brew "moreutils"
+brew "mutt"
+brew "tree"
+brew "wget"
 
 cask "macdown"
 #cask "karabiner-elements"
+
+brew "pyenv"
