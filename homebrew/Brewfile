@@ -1,54 +1,54 @@
 # brew bundle install -v --file /Users/g180260/Brewfile
 
-tap 'homebrew/cask'
+tap "homebrew/cask"
 
-brew 'stow'
-brew 'bash'
-brew 'bash-completion@2'
-brew 'git'
-brew 'emacs'
-brew 'ag'
-brew 'findutils' # GNU find, xargs, locate
-brew 'jq'
+brew "stow"
+brew "bash"
+brew "bash-completion@2"
+brew "git"
+brew "emacs"
+brew "ag"
+brew "findutils" # GNU find, xargs, locate
+brew "jq"
 
-#cask '1password'
-cask '1password-cli'
-cask 'slack'
-cask 'bartender'
-cask 'witch'
-cask 'signal'
-cask 'alfred'
-cask 'spotify'
-cask 'spotify-notifications'
+#cask "1password"
+cask "1password-cli"
+cask "slack"
+cask "bartender"
+cask "witch"
+cask "signal"
+cask "alfred"
+cask "spotify"
+cask "spotify-notifications"
 
-brew 'mas'
+brew "mas"
 
-mas 'the-clock', id: 488764545
-mas 'todoist', id: 585829637
+mas "The Clock", id: 488764545
+mas "Todoist", id: 585829637
 
-tap 'homebrew/cask-fonts'
-cask 'font-hack'
+tap "homebrew/cask-fonts"
+cask "font-hack"
 
-mas 'airmail', id: 918858936
-mas 'divvy', id: 413857545
-mas 'miniplay', id: 936243210
+mas "Airmail", id: 918858936
+mas "Divvy", id: 413857545
+mas "MiniPlay", id: 936243210
 
-cask 'sublime-text'
-cask 'bettertouchtool'
-cask 'dash'
+cask "sublime-text"
+cask "bettertouchtool"
+cask "dash"
 
-cask 'virtualbox'
-cask 'vagrant'
-brew 'docker-machine'
+cask "virtualbox"
+cask "vagrant"
+brew "docker-machine"
 
-brew 'awscli'
-cask 'aws-vault'
+brew "awscli"
+cask "aws-vault"
 
-brew 'grep'
-brew 'watch'
-brew 'coreutils'
+brew "grep"
+brew "watch"
+brew "coreutils"
 
-brew 'kubectl'
+brew "kubectl"
 
-cask 'macdown'
-cask 'karabiner-elements'
+cask "macdown"
+cask "karabiner-elements"
