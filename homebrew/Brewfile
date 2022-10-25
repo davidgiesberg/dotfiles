@@ -1,4 +1,4 @@
-# brew bundle install -v --file /Users/g180260/Brewfile
+# brew bundle install -v --file $HOME/Brewfile
 
 tap "homebrew/cask"
 
@@ -7,7 +7,7 @@ brew "bash"
 brew "bash-completion@2"
 brew "git"
 brew "emacs"
-brew "ag"
+brew "the_silver_searcher"
 brew "findutils" # GNU find, xargs, locate
 brew "jq"
 
