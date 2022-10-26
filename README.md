@@ -8,7 +8,7 @@ Managed with GNU `stow` (install with either `brew install stow` or `apt-get ins
 Auto-install
 
 ```
-curl https://raw.github.com/davidgiesberg/dotfiles/master/remote-install.sh | bash
+curl https://raw.githubusercontent.com/davidgiesberg/dotfiles/master/remote-install.sh | bash
 ```
 
 Install and bootstrap as follows:
