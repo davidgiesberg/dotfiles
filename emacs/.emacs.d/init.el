@@ -1,3 +1,7 @@
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
+
 ;; use-package - https://github.com/jwiegley/use-package#getting-started
 (eval-when-compile
   ;; Following line is not needed if use-package.el is in ~/.emacs.d
@@ -67,19 +71,20 @@
 (global-set-key (kbd "<home>") 'ignore)
 (global-set-key (kbd "<end>") 'ignore)
 
-(require 'yaml-mode)
-(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+;; (require 'yaml-mode)
+;; (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
-(require 'terraform-mode)
-(add-to-list 'auto-mode-alist '("\\.tf\\'" . terraform-mode))
+;; (require 'terraform-mode)
+;; (add-to-list 'auto-mode-alist '("\\.tf\\'" . terraform-mode))
 
 ;; ;; Auto completion
 (use-package company
+  :ensure t
   :config
   (setq company-idle-delay 0
         company-minimum-prefix-length 4
-        company-selection-wrap-around t))
-(global-company-mode)
+        company-selection-wrap-around t)
+        (global-company-mode t))
 
 ;; git gutter
 ;; (use-package git-gutter-fringe
@@ -87,9 +92,11 @@
 ;;   :ensure)
 ;; ;; TODO: Figure out if below require can be included in above use-package clause
 ;; (require 'git-gutter-fringe)
-(require 'diff-hl)
-(global-diff-hl-mode)
-(unless (window-system) (diff-hl-margin-mode))
+(use-package diff-hl
+  :ensure t
+  :config
+  (global-diff-hl-mode)
+  (unless (window-system) (diff-hl-margin-mode)))
 ;; (custom-set-variables
 ;;  ;; custom-set-variables was added by Custom.
 ;;  ;; If you edit it by hand, you could mess it up, so be careful.
