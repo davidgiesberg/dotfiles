@@ -1,10 +1,27 @@
 #!/bin/bash
+set -euo pipefail
 
 source ./bootstrap-includes
 
 check_for_root
 set_platform
 
+if [ "$platform" == "OSX" ] && [ ! -e /opt/homebrew/bin/brew ]; then
+  echo "Installing homebrew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+if ! command -v brew 2>&1 > /dev/null && [ -e /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 check_for_and_install_pkg git
 
 check_for_and_install_pkg stow
+
+if [ "$platform" == "OSX" ]; then
+  echo "You probably want to run \"eval \"\$(/opt/homebrew/bin/brew shellenv)\"\" and then"
+  echo "brew install bash"
+  echo "sudo chsh -s /opt/homebrew/bin/bash \$(whoami)"
+  echo "stow bash && stow homebrew"
+fi

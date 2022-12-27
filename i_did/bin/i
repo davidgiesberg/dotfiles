@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/usr/bin/env bash
 DATE_STR=$(date +%Y-%m-%d)
 TIME_STR=$(date +%H:%M)
 NOTATIONAL_DATA_DIR="$HOME/Dropbox/new_notes/current"

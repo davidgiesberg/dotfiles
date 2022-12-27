@@ -25,7 +25,6 @@ brew "mas"
 mas "The Clock", id: 488764545
 mas "Todoist", id: 585829637
 
-tap "homebrew/cask-fonts"
 cask "font-hack"
 
 mas "Airmail", id: 918858936
@@ -33,6 +32,7 @@ mas "Airmail", id: 918858936
 mas "MiniPlay", id: 936243210
 
 cask "sublime-text"
+cask "sublime-merge"
 cask "dash"
 
 brew "awscli"
@@ -55,3 +55,32 @@ brew "pyenv"
 cask "iterm2"
 cask "brave-browser"
 cask "firefox"
+
+# Work cask "slack"
+
+mas "the-clock", id: 488764545
+mas "todoist", id: 585829637
+
+tap "homebrew/cask-fonts"
+
+mas "airmail", id: 918858936
+mas "divvy", id: 413857545
+mas "miniplay", id: 936243210
+
+cask "bettertouchtool"
+cask "swish"
+
+#cask "virtualbox"
+#cask "vagrant"
+#brew "docker-machine"
+
+# Work brew "awscli"
+# Work cask "aws-vault"
+
+# Work brew "kubectl"
+
+cask "zoom"
+
+mas "Home Assistant", id: 1099568401
+
+cask "dropbox"
