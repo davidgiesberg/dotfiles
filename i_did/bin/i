@@ -1,8 +1,8 @@
-#!/usr/local/bin/bash
+#!/opt/homebrew/bin/bash
 DATE_STR=$(date +%Y-%m-%d)
 TIME_STR=$(date +%H:%M)
 NOTATIONAL_DATA_DIR="$HOME/Dropbox/new_notes/current"
-NOTE_FILE="$NOTATIONAL_DATA_DIR/$DATE_STR.txt"
+NOTE_FILE="$NOTATIONAL_DATA_DIR/$DATE_STR.md"
 
 if [[ -z "$@" ]]; then
     read NOTE
@@ -14,12 +14,10 @@ if [[ -z "$NOTE" ]]; then
     exit 0
 fi
 
-NOTE_TEXT="$TIME_STR: ${NOTE^}"
+NOTE_TEXT="- [x] $TIME_STR: ${NOTE^}"
 
-last_line="$(tail -n1 "$NOTE_FILE")"
-if [ "${last_line:-1}" != "\n" ]; then
-#    printf "\n" >> "$NOTE_FILE"
-    true
+if [ "$(tail -c1 "$NOTE_FILE"; echo x)" != $'\nx' ]; then
+    echo "" >>"$NOTE_FILE"
 fi
 
 echo "$NOTE_TEXT" >> "$NOTE_FILE"
