@@ -1,68 +1,77 @@
-# brew bundle install -v --file $HOME/Brewfile
-
-tap "homebrew/cask"
-
-brew "stow"
+#tap "ankitpokhrel/jira-cli"
+#tap "hashicorp/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+tap "nahive/spotify-notify"
+tap "samsullivan/samsullivan"
+tap "sourcegraph/src-cli"
+tap "twelvelabs/tap"
+brew "ca-certificates"
+brew "awscli"
 brew "bash"
 brew "bash-completion@2"
-brew "git"
-brew "emacs"
-brew "the_silver_searcher"
-brew "findutils" # GNU find, xargs, locate
-brew "jq"
-
-cask "1password"
-cask "1password-cli"
-cask "slack"
-cask "bartender"
-cask "witch"
-cask "signal"
-cask "alfred"
-cask "spotify"
-
-brew "mas"
-
-mas "The Clock", id: 488764545
-mas "Todoist", id: 585829637
-
-tap "homebrew/cask-fonts"
-cask "font-hack"
-
-#mas "Airmail", id: 918858936
-#mas "Divvy", id: 413857545 # Not M1 compatible
-#mas "MiniPlay", id: 936243210
-
-cask "sublime-text"
-cask "dash"
-
-brew "awscli"
-cask "aws-vault"
-cask "google-cloud-sdk"
-
-brew "grep"
-brew "watch"
 brew "coreutils"
-brew "moreutils"
+brew "cowsay"
+brew "csvkit"
+brew "diffutils"
+brew "direnv"
+brew "docutils"
+brew "duckdb"
+brew "emacs"
+brew "findutils"
+brew "git"
+brew "gitleaks"
+brew "gitlint"
+brew "glab"
+brew "gnu-sed"
+brew "grep"
+brew "gum"
+brew "helm"
+brew "htmlq"
+brew "httpie"
+brew "jd"
+brew "jq"
+brew "kubernetes-cli"
+brew "mas"
+brew "minikube"
+brew "moreutils", link: false
 brew "mutt"
+brew "ncdu"
+brew "nmap"
+brew "parallel"
+brew "prettier"
+brew "ripgrep"
+brew "shellcheck"
+brew "shfmt"
+brew "stow"
+brew "the_silver_searcher"
 brew "tree"
+brew "uv"
+brew "watch"
 brew "wget"
-
-cask "macdown"
-#cask "karabiner-elements"
-
-brew "pyenv"
-
-cask "iterm2"
+brew "yq"
+brew "hashicorp/tap/terraform"
+brew "samsullivan/samsullivan/jqless"
+brew "sourcegraph/src-cli/src-cli"
+cask "1password"
+cask "activitywatch"
+cask "alfred"
+cask "aws-vault-binary"
+cask "bartender"
 cask "brave-browser"
-cask "firefox"
-
-mas "meeter", id: 1510445899
-mas "Home Assistant", id: 1099568401
-
-cask "docker"
+cask "docker-desktop"
 cask "dropbox"
-cask "vscodium"
-
+cask "firefox"
+cask "font-hack"
+cask "gcloud-cli"
+cask "iterm2"
+cask "jordanbaird-ice"
+cask "macdown"
+cask "meetingbar"
+cask "obsidian"
+cask "signal"
+cask "slack"
 cask "soundsource"
-
-cask "lunar"
+cask "spotify"
+cask "spotify-notify"
+cask "witch"
